@@ -75,6 +75,10 @@ nav li a {
     display: flex;
 }
 
+.container h2 {
+    margin-bottom: 10px;
+}
+
 #sobre-a-loja img {
     max-width: 400px;
     margin-right: 24px;
@@ -125,13 +129,14 @@ button {
 }
 
 .price {
-    margin: 16px 0;
-    display: block;
+    margin: 16px 2px;
+    /* display: block; */
 }
 
 .price del {
     color: #ccc;
     font-size: 14px;
+    margin-right: 5px;
 }
 
 .form-campo {
@@ -169,7 +174,7 @@ footer li {
 }
 
 footer li img {
-    height: 32px;
+    height: 20px;
 }
 
 footer .container {
