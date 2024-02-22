@@ -6,15 +6,23 @@ $(document).ready(function () {
         $('nav').slideToggle();
     });
 
+    // mascaras
     $('#name').mask('A', {
         translation: {
             "A": { pattern: /^[a-zA-Z]+$/, recursive: true }
         }
     });
-
-    $('#phone_with_ddd').mask('(00) 0000-0000', {
+    $('#phone_with_ddd').mask('(00)0000-0000', {
         placeholder: "(00) 0000-0000"
     });
+    $('#email').mask("A", {
+        placeholder: "you@example.com",
+        translation: {
+            "A": { pattern: /[\w@\-.+]/, recursive: true }
+        }
+    });
+
+    // validações
     $('form').validate({
         rules: {
             name: {
@@ -32,8 +40,8 @@ $(document).ready(function () {
         },
         messages: {
             name: 'Por favor, insira o seu nome',
-            telefone: 'Por favor digite o seu numero de telefone',
-            email: "Por favor digite o seu endereço de e-mail"
+            telefone: 'Por favor, insira o seu numero de telefone',
+            email: "Por favor, insira o seu endereço de e-mail"
         },
         submitHandler: function (form) {
             console.log(form)
@@ -41,8 +49,16 @@ $(document).ready(function () {
         invalidHandler: function (evento, validador) {
             let camposIncorretos = validador.numberOfInvalids();
             if (camposIncorretos) {
-                alert(`Existme ${camposIncorretos} campos incorretos`)
+                alert(`Existem ${camposIncorretos} campos incorretos`)
             }
         }
+    })
+
+    $('.lista-veiculos button').click(function () {
+        console.log('Passei aqui')
+        const destino = $('#contato');
+        $('html').animate({
+            scrollTop: destino.offset().top
+        },1000)
     })
 })

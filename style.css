@@ -130,7 +130,7 @@ button {
 
 .price {
     margin: 16px 2px;
-    /* display: block; */
+    display: block;
 }
 
 .price del {
