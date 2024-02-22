@@ -55,10 +55,13 @@ $(document).ready(function () {
     })
 
     $('.lista-veiculos button').click(function () {
-        console.log('Passei aqui')
         const destino = $('#contato');
+        const nomeVeiculo = $(this).parent().find('h3').text();
+
+        $('#veiculo-interesse').val(nomeVeiculo);
+
         $('html').animate({
             scrollTop: destino.offset().top
-        },1000)
+        }, 1000)
     })
 })
