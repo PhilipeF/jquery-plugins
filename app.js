@@ -41,7 +41,7 @@ $(document).ready(function () {
         messages: {
             name: 'Por favor, insira o seu nome',
             telefone: 'Por favor, insira o seu numero de telefone',
-            email: "Por favor, insira o seu endereço de e-mail"
+            email: 'Por favor, insira o seu endereço de e-mail'
         },
         submitHandler: function (form) {
             console.log(form)
